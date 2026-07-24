@@ -21,6 +21,7 @@ python -m nuitka --standalone --enable-plugin=numpy importador20.py
 python -m nuitka --onefile --enable-plugin=numpy importador20.py
 python -m nuitka --standalone --onefile --onefile-no-compression --enable-plugin=numpy importador20.py
 python -m nuitka --standalone --onefile --onefile-no-compression --include-package=openpyxl --enable-plugin=numpy importador20.py
+python -m nuitka --standalone --onefile --onefile-no-compression --include-package=openpyxl --include-package=xlsxwriter --enable-plugin=numpy importador20.py
 
 ########retornar o erro.
 importador20.exe > erro.txt 2>&1
