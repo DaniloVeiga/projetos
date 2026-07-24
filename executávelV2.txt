@@ -14,6 +14,7 @@ pip install ordered-set zstandard
 python -m nuitka seu_script.py
 2-Gerar executável standalone (mais usado)
 python -m nuitka --standalone seu_script.py
+python -m nuitka --standalone --onefile --onefile-no-compression --follow-imports --include-package=plotly --include-package-data=plotly --include-package=flask --include-package=dash --include-package=dash.backends --include-package=kaleido --include-module=dash.backends._flask .\seu_script.py
 3-Gerar executável único (modo "onefile")
 python -m nuitka --standalone --onefile .\validacao_gest_proj31.py
 4-Compilação otimizada
