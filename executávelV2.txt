@@ -1,0 +1,40 @@
+python -m PyInstaller --clean --onefile projeto001.py
+python -m PyInstaller --clean --onefile --windowed projeto001.py
+python -m PyInstaller --clean --onefile --noconsole projeto001.py
+python -m PyInstaller --clean --onefile projeto001.pyw
+python -m PyInstaller --clean --onefile --windowed projeto001.pyw
+python -m PyInstaller --onefile --collect-all dash --collect-all flask validacao_gest_proj29.py
+python -m PyInstaller --clean --onefile --collect-all dash --collect-all flask validacao_gest_proj29.py
+pip uninstall PyInstaller
+pip install PyInstaller
+-------------
+pip install nuitka
+pip install ordered-set zstandard
+1-básico
+python -m nuitka seu_script.py
+2-Gerar executável standalone (mais usado)
+python -m nuitka --standalone seu_script.py
+3-Gerar executável único (modo "onefile")
+python -m nuitka --standalone --onefile .\validacao_gest_proj31.py
+4-Compilação otimizada
+python -m nuitka --standalone --onefile --lto=yes --clang seu_script.py
+Opções importantes:
+
+--lto=yes → otimização de linkagem (mais rápido)
+--clang → usa compilador Clang (melhor em alguns casos)
+
+5-Sem console (apps com interface gráfica)
+python -m nuitka --standalone --onefile --windows-disable-console seu_script.py
+6-Adicionar ícone ao executável
+python -m nuitka --standalone --onefile --windows-icon-from-ico=icone.ico seu_script.py
+7-Incluir arquivos externos (imagens, dados, etc)
+python -m nuitka --standalone --onefile --include-data-files=logo.png=logo.png seu_script.py
+8-Compilar módulos específicos
+python -m nuitka --module seu_script.py
+9-Usando com projetos maiores (recomendado)
+python -m nuitka main.py --standalone --onefile --follow-imports --enable-plugin=tk-inter --windows-disable-console
+10-Dica avançada (que pouca gente usa)
+python -m nuitka --standalone --onefile --jobs=4 --lto=yes --remove-output seu_script.py
+
+--jobs=4 → usa múltiplos núcleos
+--remove-output → limpa builds antigos
