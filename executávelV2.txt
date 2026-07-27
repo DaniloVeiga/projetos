@@ -14,14 +14,17 @@ pip install ordered-set zstandard
 python -m nuitka seu_script.py
 2-Gerar executável standalone (mais usado)
 python -m nuitka --standalone seu_script.py
-python -m nuitka --standalone --onefile --onefile-no-compression --follow-imports --include-package=plotly --include-package-data=plotly --include-package=flask --include-package=dash --include-package=dash.backends --include-package=kaleido --include-module=dash.backends._flask .\seu_script.py
+python -m nuitka --standalone --follow-imports --include-package=dash --include-package=plotly --include-package=kaleido --include-package=pandas --include-package-data=plotly --include-package-data=dash --include-package=kaleido .\validacao_gest_proje62.py
+****************
+Foi identificado um problema de empacotamento entre Nuitka e Kaleido 1.3.0. Embora os módulos Python do Kaleido sejam incorporados à compilação, os recursos estáticos necessários para geração de imagens (arquivo kaleido_scopes.js, localizado em kaleido/vendor) não foram incluídos automaticamente no build. Como consequência, a exportação de imagens falhava com o erro ReferenceError: kaleido_scopes is not defined. A cópia manual da pasta vendor para a distribuição compilada solucionou o problema.
+****************
 
 ***importador20.py***
 python -m nuitka --standalone --enable-plugin=numpy importador20.py
 python -m nuitka --onefile --enable-plugin=numpy importador20.py
 python -m nuitka --standalone --onefile --onefile-no-compression --enable-plugin=numpy importador20.py
 python -m nuitka --standalone --onefile --onefile-no-compression --include-package=openpyxl --enable-plugin=numpy importador20.py
-python -m nuitka --standalone --onefile --onefile-no-compression --include-package=openpyxl --include-package=xlsxwriter --enable-plugin=numpy importador20.py
+python -m nuitka --onefile --onefile-no-compression --include-package=openpyxl --include-package=xlsxwriter --enable-plugin=numpy importador20.py
 
 ########retornar o erro.
 importador20.exe > erro.txt 2>&1
