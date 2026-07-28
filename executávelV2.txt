@@ -26,6 +26,9 @@ python -m nuitka --standalone --onefile --onefile-no-compression --enable-plugin
 python -m nuitka --standalone --onefile --onefile-no-compression --include-package=openpyxl --enable-plugin=numpy importador20.py
 python -m nuitka --onefile --onefile-no-compression --include-package=openpyxl --include-package=xlsxwriter --enable-plugin=numpy importador20.py
 
+***template025.py***
+python -m nuitka --standalone --follow-imports --include-package=pandas --include-package=dash --include-package=plotly --include-package=openpyxl --include-package=kaleido .\template025.py
+
 ########retornar o erro.
 importador20.exe > erro.txt 2>&1
 
