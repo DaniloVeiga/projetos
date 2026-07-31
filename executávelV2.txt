@@ -35,6 +35,9 @@ python -m nuitka --onefile --onefile-no-compression --include-package=openpyxl -
 ***template025.py***
 python -m nuitka --standalone --follow-imports --include-package=pandas --include-package=dash --include-package=plotly --include-package=openpyxl --include-package=kaleido .\template025.py
 
+
+***dashboard_v6****
+python -m nuitka --standalone --include-package=dash --include-data-dir=assets=assets --include-data-dir=Ilustracoes=Ilustracoes --include-data-dir=Projetos=Projetos dashboard_v6.py
 ########retornar o erro.
 importador20.exe > erro.txt 2>&1
 
