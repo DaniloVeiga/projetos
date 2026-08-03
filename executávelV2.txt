@@ -38,6 +38,7 @@ python -m nuitka --standalone --follow-imports --include-package=pandas --includ
 
 ***dashboard_v6****
 python -m nuitka --standalone --include-package=dash --include-data-dir=assets=assets --include-data-dir=Ilustracoes=Ilustracoes --include-data-dir=Projetos=Projetos dashboard_v6.py
+python -m nuitka --standalone --include-package=dash --include-data-dir=assets=assets --include-data-dir=Ilustracoes=Ilustracoes --include-data-dir=Projetos=Projetos --include-data-dir=Bases=Bases --include-data-dir='Controle Geral & Bases'='Controle Geral & Bases' --include-data-dir='Documentações'='Documentações' --include-data-dir='KPI peças EPIS'='KPI peças EPIS' --include-data-dir='Liberação de Peças - EPIS'='Liberação de Peças - EPIS' --include-data-dir='Liberação&Catalogação - Peças Novas'='Liberação&Catalogação - Peças Novas' --include-data-dir='Lições Aprendidas'='Lições Aprendidas' --include-data-dir='Overview Projetos Peças'='Overview Projetos Peças' --include-data-dir=SVE=SVE --include-data-dir=Tickets=Tickets dashboard_v6.py
 ########retornar o erro.
 importador20.exe > erro.txt 2>&1
 
