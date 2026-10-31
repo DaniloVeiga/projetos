@@ -1,0 +1,43 @@
+buscar player
+winget search vlc
+
+instalar player
+winget install ***ID***
+
+repositório do arquivo m3u
+https://github.com/iptv-org/iptv
+
+Canais
+https://iptv-org.github.io/iptv/index.m3u
+-
+canais
+1 - cnn brasil
+2 - Globonews
+3 - recordnews
+4 - uol
+5 - sbtnews
+6 - redetv!
+7 - tv cultura
+8 - sbt
+9 - globo
+10 - jovem pan News
+11 - cazéTV
+12 - TNT Novelas (BRAZIL)
+13 - AXN (BRAZIL)
+14 - SONY (BRAZIL)
+15 - TV CAMARA
+16 - TV SENADO
+17 - TIMES BRASIL
+18 - TV BRASIL
+19 - TELECINE ACTION
+20 - Agromais
+21 - Arte1
+22 - Nick
+23 - Comedy Central
+24 - Futura
+25 - euronews Portugal
+26 - lifetime
+27 - Nickelodeon
+28 - REDE PLUTO
+29 - TV BRICS
+30 - SONY MOVIES BRASIL
