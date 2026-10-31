@@ -1,0 +1,22 @@
+Segue abaixo as sintaxes para compilar utilizando nuitka_python no modo standalone, para os respectivos módulos desenvolvidos.
+
+***compilação standalone - dashboard_v7***
+python -m nuitka --standalone --include-package=dash --include-data-dir=assets=assets --include-data-dir=Ilustracoes=Ilustracoes --include-data-dir=Projetos=Projetos --include-data-dir=Bases=Bases --include-data-dir='Controle Geral & Bases'='Controle Geral & Bases' --include-data-dir='Documentações'='Documentações' --include-data-dir='KPI peças EPIS'='KPI peças EPIS' --include-data-dir='Liberação de Peças - EPIS'='Liberação de Peças - EPIS' --include-data-dir='Liberação&Catalogação - Peças Novas'='Liberação&Catalogação - Peças Novas' --include-data-dir='Lições Aprendidas'='Lições Aprendidas' --include-data-dir='Overview Projetos Peças'='Overview Projetos Peças' --include-data-dir=SVE=SVE --include-data-dir=Tickets=Tickets dashboard_v7.py
+
+***compilação standalone - Ilustracoes***
+python -m nuitka --standalone --follow-imports --include-package=pandas --include-package=dash --include-package=plotly --include-package=openpyxl --include-package=kaleido --include-data-dir=base_sql=base_sql .\Ilustracoes.py
+
+***compilação standalone - Projetos***
+python -m nuitka --standalone --follow-imports --include-package=dash --include-package=plotly --include-package=kaleido --include-package=pandas --include-package-data=plotly --include-package-data=dash --include-package=kaleido --include-data-dir=base_sql=base_sql Projetos.py
+
+***compilação importador029.py(tickets)***
+python -m nuitka --onefile --onefile-no-compression --follow-imports --include-package=pandas --include-package=datetime --include-package=os --include-package=sqlite3 --include-package=numpy .\importador029.py
+
+***compilação compilador001.py(tickets)***
+python -m nuitka --onefile --onefile-no-compression --follow-imports --include-package=glob --include-package=pandas .\compilador001.py
+
+***módulo tickets***
+python -m nuitka --standalone --follow-imports --include-package=pandas --include-package=dash --include-package=plotly --include-package=tempfile --include-package=datetime --include-package=sqlite3 --include-package=openpyxl --include-package=kaleido --include-package=threading --include-package=webbrowser --include-package=docx --include-package=os .\tickets_v79.py
+
+***módulos***
+...\AppData\Local\Programs\Python\Python314\Lib\site-packages\
