@@ -1,0 +1,44 @@
+gestão de energia
+==================
+1 - windows+r
+2 - control
+3 - Exibir por.: alterar para ícones pequenos.
+3 - Opções de energia
+4 - Escolher a função do botão de energia
+5 - Alterar configurações não disponíveis no momento.
+5.a. ligar inicialização rápida = Null
+5.b. Suspensão = Null
+5.c. Hibernar = Null
+5.d. Bloquear = Null
+
+Opções do CHKDSK pelo CMD
+==========================
+chkdsk C: /f /r	Verifica e corrige erros, incluindo setores defeituosos.
+
+Apagar temporários
+==========================
+del /f /s /q "%TEMP%\*.*"
+
+Limpar cache de miniaturas e arquivos do Explorer
+==========================
+del /f /q "%LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db"
+
+Limpar cache dos navegadores
+==========================
+rd /s /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache"
+rd /s /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Code Cache"
+del /f /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Network\Cookies"
+-
+rd /s /q "%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Cache"
+rd /s /q "%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Code Cache"
+del /f /q "%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Network\Cookies"
+
+Performance
+==================
+url.: https://github.com/christitustech/winutil
+comando.: irm https://christitus.com/win | iex
+>>> Tweaks >>> Minimal >>> Run Tweaks
+
+Office
+==================
+https://getartcraft.com/
